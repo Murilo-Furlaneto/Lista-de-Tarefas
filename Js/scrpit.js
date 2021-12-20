@@ -1,14 +1,14 @@
-var enterButton = document.getElementById("enter");
-var input = document.getElementById("userInput");
-var ul = document.getElementById("ul");
-var item = document.getElementsByTagName("li");
+let enterButton = document.getElementById("enter");
+let input = document.getElementById("userInput");
+let ul = document.getElementById("ul");
+let item = document.getElementsByTagName("li");
 
 function inputLength() {
     return input.value.length;
 }
 
 function createListElement() {
-    var li = document.createElement("li");
+    let li = document.createElement("li");
 
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
@@ -20,7 +20,7 @@ function createListElement() {
 
     li.addEventListener("click", crossOut);
 
-    var dBtn = document.createElement("button");
+    let dBtn = document.createElement("button");
     dBtn.appendChild(document.createTextNode("X"));
     li.appendChild(dBtn);
     dBtn.addEventListener("click", deleteListItem);
